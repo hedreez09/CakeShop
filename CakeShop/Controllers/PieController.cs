@@ -23,9 +23,23 @@ namespace CakeShop.Controllers
 
 		public ViewResult List()
 		{
-			PiesListViewModel pieListViewModel = new PiesListViewModel();
-			pieListViewModel.CurrentCategory = "Cheese Cakes";
-			return View(pieListViewModel);
+			PiesListViewModel piesListViewModel = new PiesListViewModel
+			{
+				Pies = _pieRepository.AllPies,
+
+				CurrentCategory = "Cheese Cakes"
+			};
+			return View(piesListViewModel); 
+		}
+
+		public IActionResult Details(int id)
+		{
+			var pie = _pieRepository.GetPieById(id);
+
+			if (pie == null)
+				return NotFound();
+
+			return View(pie);
 		}
 	}
 }
