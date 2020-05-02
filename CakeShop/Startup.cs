@@ -30,6 +30,8 @@ namespace CakeShop
 
 			services.AddScoped<ICategoryRepository, CategoryRepository>();
 			services.AddScoped<IPieRepository, PieRepository>();
+			services.AddScoped<IOrderRepository, OrderRepository>();
+								
 			services.AddScoped<ShoppingCart>(sp => ShoppingCart.GetCart(sp));//Help in getting cart
 			services.AddHttpContextAccessor(); //for http requests
 			services.AddSession();
