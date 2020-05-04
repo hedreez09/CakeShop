@@ -6,6 +6,7 @@ using CakeShop.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -27,6 +28,7 @@ namespace CakeShop
 		{
 			services.AddDbContext<AppDbContext>(options =>
 			options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+			services.AddDefaultIdentity<IdentityUser>().AddEntityFrameworkStores<AppDbContext>();
 
 			services.AddScoped<ICategoryRepository, CategoryRepository>();
 			services.AddScoped<IPieRepository, PieRepository>();
@@ -36,6 +38,7 @@ namespace CakeShop
 			services.AddHttpContextAccessor(); //for http requests
 			services.AddSession();
 			services.AddControllersWithViews();
+			services.AddRazorPages();
 		}
 
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -56,6 +59,7 @@ namespace CakeShop
 			app.UseStaticFiles(); // this handles the static file of the application
 			app.UseSession();// middleare for seesion handling
 			app.UseRouting();
+			app.UseAuthentication();//enble asp.net identity auth.
 
 			app.UseAuthorization();
 
@@ -64,7 +68,9 @@ namespace CakeShop
 				endpoints.MapControllerRoute(
 					name: "default",
 					pattern: "{controller=Home}/{action=Index}/{id?}");
+				endpoints.MapRazorPages();
 			});
+
 		}
 	}
 }
