@@ -6,10 +6,9 @@
             <li><a asp-controller="Pie" asp-action="Details" asp-route-id="@Model.PieId">@Model.Name</a></li>
         </ul>
         <div class="product-img-wrap">
-            <img class="product-img-primary" src="@Model.ImageThumbnailUrl" alt="@Model.ShortDescription" title="@Model.ShortDescription">
-            <img class="product-img-primary" src="@Model.ImageThumbnailUrl" alt="@Model.ShortDescription" title="@Model.ShortDescription">
+            <img class="product-img-alt" src="@Model.ImageThumbnailUrl" alt="@Model.ShortDescription" title="@Model.ShortDescription">
+            <img class="product-img-alt" src="@Model.ImageThumbnailUrl" alt="@Model.ShortDescription" title="@Model.ShortDescription">
         </div>
-        <a class="product-link" href="#"></a>
         <div class="product-caption">
             <h5 class="product-caption-title">@Model.ShortDescription</h5>
             <div class="product-caption-price">
@@ -18,9 +17,7 @@
             <ul class="product-caption-feature-list">
                 <li>
                     <a class="btn btn-primary"
-                       asp-controller="ShoppingCart"
-                       asp-action="AddToShoppingCart"
-                       asp-route-pieId="@Model.PieId">
+                       asp-controller="ShoppingCart" asp-action="AddToShoppingCart" asp-route-pieId="@Model.PieId">
                         Add to cart
                     </a>
                 </li>
