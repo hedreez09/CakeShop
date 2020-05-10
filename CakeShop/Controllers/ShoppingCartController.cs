@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using CakeShop.Data.Entites;
 using CakeShop.Models;
 using CakeShop.ViewModels;
 using Microsoft.AspNetCore.Mvc;

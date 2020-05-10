@@ -1,4 +1,5 @@
-﻿using CakeShop.Models;
+﻿using CakeShop.Data.Entites;
+using CakeShop.Models;
 using CakeShop.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using System;

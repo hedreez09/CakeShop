@@ -1,4 +1,5 @@
-﻿using CakeShop.Models;
+﻿using CakeShop.Data.Interface;
+using CakeShop.Models;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;

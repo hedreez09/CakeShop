@@ -8,6 +8,9 @@ namespace CakeShop.Controllers
 {
 	public class ContactController:Controller
 	{
-
+		public ActionResult Contact()
+		{
+			return View();
+		}
 	}
 }

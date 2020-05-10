@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using CakeShop.Models;
 using CakeShop.ViewModels;
+using CakeShop.Data.Entites;
 
 namespace CakeShop.Controllers
 {

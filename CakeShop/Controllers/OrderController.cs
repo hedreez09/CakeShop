@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using CakeShop.Data.Entites;
 using CakeShop.Models;
 using Microsoft.AspNetCore.Mvc;
 
@@ -50,7 +51,7 @@ namespace CakeShop.Controllers
 
 		public IActionResult CheckoutComplete()
 		{
-			ViewBag.CheckoutCompleteMessage = "Thanksfor your order.You will soon enjoy your delicious pie!";
+			ViewBag.CheckoutCompleteMessage = "Thanks for your order.You will soon enjoy your delicious pie!";
 			return View();
 		}
 	}

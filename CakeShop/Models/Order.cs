@@ -5,14 +5,15 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace CakeShop.Models
+namespace CakeShop.Models1
 {
+    /*
     public class Order
     {
         [BindNever]
         public int OrderId { get; set; }
 
-        public List<OrderDetail> OrderDetails { get; set; }
+        public List<OrderDetail1> OrderDetails { get; set; }
 
         [Required(ErrorMessage = "Please enter your first name")]
         [Display(Name = "First name")]
@@ -68,4 +69,6 @@ namespace CakeShop.Models
         [ScaffoldColumn(false)]
         public DateTime OrderPlaced { get; set; }
     }
+
+    */
 }
