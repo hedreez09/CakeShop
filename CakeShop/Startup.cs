@@ -30,7 +30,7 @@ namespace CakeShop
 
 			services.AddDefaultIdentity<IdentityUser>().AddEntityFrameworkStores<AppDbContext>();
 
-			services.AddScoped<ICategoryRepository, CategoryRepository>();
+			services.AddScoped<ICategoryRepository, CategoryRepository>();				
 			services.AddScoped<IPieRepository, PieRepository>();
 			services.AddScoped<IOrderRepository, OrderRepository>();
 								
