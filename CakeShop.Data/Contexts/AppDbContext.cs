@@ -1,9 +1,11 @@
 ﻿//using Microsoft.EntityFramework;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace CakeShop.Data.Entites
 {
-    public class AppDbContext: DbContext// IdentityDbContext<IdentityUser>
+    public class AppDbContext:  IdentityDbContext<IdentityUser>
 	{
 		public AppDbContext(DbContextOptions<AppDbContext> options)
 			: base(options)

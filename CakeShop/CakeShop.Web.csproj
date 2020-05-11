@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Models\ApplicationDbContext.cs" />
     <Compile Remove="Models\Category.cs" />
     <Compile Remove="Models\Order.cs" />
     <Compile Remove="Models\OrderDetail.cs" />
